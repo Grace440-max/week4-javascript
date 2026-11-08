@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Opportunity Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!--  Header -->
+    <header>
+        <h1>My Opportunity Tracker</h1>
+
+        <p>
+            Organize your opportunities, manage application deadlines,
+            and track your progress in one place.
+        </p>
+    </header>
+
+    <!-- Opportunity Form -->
+    <section>
+        <h2>Add a New Opportunity</h2>
+
+        <form id="opportunity-form">
+
+            <label for="opportunity-name">Opportunity Name:</label>
+            <input type="text" id="opportunity-name" required>
+
+            <label for="opportunity-type">Opportunity Type:</label>
+            <select id="opportunity-type" required>
+                <option value="">Select opportunity type</option>
+                <option value="Scholarship">Scholarship</option>
+                <option value="Internship">Internship</option>
+                <option value="Mentorship">Mentorship</option>
+                <option value="Training">Training</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="application-deadline">Application Deadline:</label>
+            <input type="date" id="application-deadline" required>
+
+            <label for="next-action">Next Action:</label>
+            <input type="text" id="next-action" required>
+            <p id="error-message"></p>
+
+            <button type="submit">Add Opportunity</button>
+
+        </form>
+    </section>
+
+    <!-- Progress -->
+    <section>
+        <h2>My Progress</h2>
+
+        <div>
+            <div>
+                <h3>Total Opportunities</h3>
+                <p id="total-opportunities">0</p>
+            </div>
+
+            <div>
+                <h3>Being Prepared</h3>
+                <p id="preparing-opportunities">0</p>
+            </div>
+
+            <div>
+                <h3>Applications Submitted</h3>
+                <p id="submitted-opportunities">0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunity List -->
+    <section>
+        <h2>My Opportunities</h2>
+
+        <p id="empty-message">
+            No opportunities added yet. Start by adding your first opportunity!
+        </p>
+
+        <div id="opportunity-list">
+
+        </div>
+    </section>
+
+</body>
+</html>
